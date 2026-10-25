@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "name": "@ai-sdk/deepgram",
+      "reviewedVersion": "3.1.39",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.deepgram`, `DeepgramTranscriptionModel`, `DeepgramSpeechModel`, `DeepgramProviderTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-QOAF6+7zj30Fojn84pMKCoy0C5nOAWGQVlEVCUQjX9I7hRiflao+jhlqHmoOtLAoXWDiupK07Cq4nHyVimAWQw==",
+      "sourceRef": "npm:@ai-sdk/deepgram@3.1.39",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ]
+}
