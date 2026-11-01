@@ -1,41 +1,45 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-deepgram",
-  "version": "1.0.0",
-  "releaseID": "modular-3",
+  "version": "1.1.0",
+  "releaseID": "weekly-upstream-20261101",
   "source": {
-    "commit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
-    "baseCommit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "commit": "ea057797494ab9bb66df8c6bfd8edc10245b20e7",
+    "baseCommit": "ea057797494ab9bb66df8c6bfd8edc10245b20e7",
     "workingTree": false,
-    "inputsSHA256": "49b802ba4a30454f78c9886ab3114537ef659ab3e6db7775479b7351f6e3f0ab"
+    "inputsSHA256": "b46f3e07b0a583d6fee81035987d74a06fc5c6109cbdf228144d1172d2c3676e"
   },
   "dependencies": [
     {
       "package": "swift-ai-core",
-      "from": "1.1.0"
+      "from": "1.2.0"
     }
   ],
   "changes": [
     {
-      "id": "remaining-package-extraction",
-      "notes": "Extract the existing runtime, typed settings and standalone tests from the compatibility aggregate. Preserve the reviewed npm baseline and existing capability/gap boundaries.",
-      "compatibility": "Initial independent Swift package version. Existing SwiftAISDK entry points remain in the development compatibility facade; no npm-version equivalence is implied."
+      "id": "weekly-upstream-20261101",
+      "notes": "Add native async throwing apiKeyProvider; resolve a fresh key immediately before every authenticated HTTP send/stream through the shared transport. Preserve static keys, custom header precedence, error/abort propagation, request builders and response parsers. TypeScript Resolvable/promise/function declarations map to an optional Sendable async closure. No other portable wire/runtime change was found in the published delta. Reviewed upstream: @ai-sdk/deepgram 3.1.39 to 3.1.43. Validation passed: node Scripts/test-packages.mjs (all 52 owning package suites and the compatibility facade); node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); docs-site check and build (100 pages). Live provider calls were not run.",
+      "compatibility": "Minor release for additive native API; existing static settings and call sites remain compatible. Updated direct dependency minimums are recorded in the manifest. Existing documented JS/framework and native product gaps remain; version-delta review does not imply full parity or live-service testing. Explicit custom authentication skips an unused credential supplier, a deliberate native callback-order adaptation."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-deepgram",
   "upstream": [
     {
       "name": "@ai-sdk/deepgram",
-      "reviewedVersion": "3.1.39",
+      "reviewedVersion": "3.1.43",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.deepgram`, `DeepgramTranscriptionModel`, `DeepgramSpeechModel`, `DeepgramProviderTests.swift`",
+      "evidence": "`AIProviders.deepgram`, `DeepgramTranscriptionModel`, `DeepgramSpeechModel`, `DeepgramProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-QOAF6+7zj30Fojn84pMKCoy0C5nOAWGQVlEVCUQjX9I7hRiflao+jhlqHmoOtLAoXWDiupK07Cq4nHyVimAWQw==",
-      "sourceRef": "npm:@ai-sdk/deepgram@3.1.39",
-      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
-      "testRefRelationship": "inventory-snapshot-not-release-verified",
-      "contractFamilies": [],
-      "contractReview": "not-imported; inspect upstream declarations before extraction"
+      "archiveIntegrity": "sha512-n4Rer/EI3MVeCoPmDtERmjb+qqcur5IdhJXa7IEECXtZIxrBEMExP8XScz2cYKkSKrieB0wNnbAuEW5bL2p9XA==",
+      "sourceRef": "npm:@ai-sdk/deepgram@3.1.43",
+      "testRef": "9b603d36186b75e58d5479445a96c76f6e2d2700",
+      "testRefRelationship": "matching-release",
+      "contractFamilies": [
+        "ProviderV4",
+        "SpeechModelV4",
+        "TranscriptionModelV4"
+      ],
+      "contractReview": "2026-11-01: published declarations, source and exact matching-release changed tests reviewed; scoped dispositions and Swift translations are in Docs/WeeklyUpstreamAudit20261101.json. Existing broader product gaps remain; reviewed delta is not full-package parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -54,7 +58,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-deepgram/Porting/map.json",
-      "sha256": "a2b160ae0f3c5c6e2a8d03eda04a5735020392480a3edf68412f0e42c8f363d1"
+      "sha256": "6d6c5e935ec4e4977e2126e44ab60b5d42891a78ba57f0af84689de07372faf1"
     },
     {
       "canonicalPath": "Packages/swift-ai-deepgram/README.md",
@@ -66,7 +70,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-deepgram/Sources/SwiftAIDeepgram/DeepgramProvider.swift",
-      "sha256": "7767a705f4f05f883407aa6aa9fd54a2885eefeb5d5812a5391b9b1597eeafc2"
+      "sha256": "a2b94894ff669e00ca3d1efd0684fd4b87720b2dba4c60bcda4b15c09e04981a"
     },
     {
       "canonicalPath": "Packages/swift-ai-deepgram/Sources/SwiftAIDeepgram/DeepgramTranscriptionParsing.swift",
@@ -74,7 +78,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-deepgram/Tests/SwiftAIDeepgramTests/DeepgramProviderTests.swift",
-      "sha256": "95c1b88d669ba82cfa0d8285d9537784421d5a3d047ad7ce441b4c77b1fc4544"
+      "sha256": "5f82542eed84270db608d5bf774b4fd8edaffe29386bb76f0f7141f8e3aef56b"
     },
     {
       "canonicalPath": "Packages/swift-ai-deepgram/Tests/SwiftAIDeepgramTests/FixtureDownloadTransport.swift",
@@ -83,6 +87,10 @@
     {
       "canonicalPath": "Packages/swift-ai-deepgram/Tests/SwiftAIDeepgramTests/TestSupport.swift",
       "sha256": "e2a6d81bd4003e0aaa733fa599059e061fe5e09d9a35454c0c98571bfc884a7e"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-deepgram/Tests/SwiftAIDeepgramTests/Weekly20261101CredentialsTests.swift",
+      "sha256": "2d9c5f7a300e68ccd042920779257140b17ff7ea1bfb314497fa6f7114bdf939"
     }
   ]
 }
