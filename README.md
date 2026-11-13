@@ -1,5 +1,5 @@
 <!-- Generated distribution; edit the canonical repository. -->
-# swift-ai-deepgram 1.2.0
+# swift-ai-deepgram 1.2.1
 
 Independent Swift-native port of Vercel AI SDK. Source and upstream dispositions are in PROVENANCE.json and Porting/.
 
@@ -8,7 +8,7 @@ Independent Swift-native port of Vercel AI SDK. Source and upstream dispositions
 Add this package to your SwiftPM dependencies:
 
 ```swift
-.package(url: "https://github.com/SwiftAISDK/swift-ai-deepgram.git", from: "1.2.0")
+.package(url: "https://github.com/SwiftAISDK/swift-ai-deepgram.git", from: "1.2.1")
 ```
 
 Products: `SwiftAIDeepgram`.
@@ -18,7 +18,7 @@ Contribute and report issues in the canonical SwiftAISDK repository.
 
 # SwiftAIDeepgram
 
-Swift-native port of `@ai-sdk/deepgram`, reviewed through npm 3.1.48. The canonical
+Swift-native port of `@ai-sdk/deepgram`, reviewed through npm 3.1.53. The canonical
 SwiftAISDK repository owns all source edits; this repository is its deterministic
 standalone export.
 
